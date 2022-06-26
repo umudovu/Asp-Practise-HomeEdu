@@ -13,6 +13,7 @@ namespace Asp_Practise_HomeEdu.ViewModel
         public List<Blog> Blogs { get; set; }
         public List<Author> Authors { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<Cours> Courses { get; set; }
 
 
     }

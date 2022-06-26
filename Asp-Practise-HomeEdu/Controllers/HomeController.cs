@@ -27,8 +27,9 @@ namespace Asp_Practise_HomeEdu.Controllers
             {
                 Sliders = _context.Slider.ToList(),
                 SliderContent = _context.SliderContents.FirstOrDefault(),
-                Events = _context.Events.ToList(),
+                Events = _context.Events.Take(8).ToList(),
                 Blogs = _context.Blogs.Include(c => c.Comments).Include(a=>a.Author).Skip(7).Take(3).ToList(),
+                Courses=_context.Courses.Take(3).ToList(),
 
             };
 
