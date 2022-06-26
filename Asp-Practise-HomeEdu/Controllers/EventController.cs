@@ -20,5 +20,13 @@ namespace Asp_Practise_HomeEdu.Controllers
 
             return View(events);
         }
+        
+        
+        public IActionResult EventDetail(int id)
+        {
+            Event ev = _context.Events.FirstOrDefault(e => e.Id == id);
+
+            return View(ev);
+        }
     }
 }

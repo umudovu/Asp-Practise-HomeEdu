@@ -21,6 +21,16 @@ namespace Asp_Practise_HomeEdu.Controllers
         {
             List<Cours> cours = _context.Courses.ToList();
             return View(cours);
+        } 
+
+        
+        public IActionResult CourseDetail(int id)
+        {
+            Cours cours = _context.Courses.FirstOrDefault(c => c.Id == id);
+
+            return View(cours);
         }
+
+
     }
 }
