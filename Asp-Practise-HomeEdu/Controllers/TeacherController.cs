@@ -24,5 +24,22 @@ namespace Asp_Practise_HomeEdu.Controllers
 
             return View(teachers);
         }
+
+
+        public IActionResult Search(string search)
+        {
+            List<Teacher> teachers = new List<Teacher>();
+            if (search != null)
+            {
+                teachers = _context.Teachers
+                .OrderBy(c => c.Id)
+                .Where(c => c.Name.ToLower()
+                .Contains(search.ToLower()))
+                .Take(5)
+                .ToList();
+            }
+
+            return PartialView("_SearchTeacherPartial", teachers);
+        }
     }
 }

@@ -1,8 +1,12 @@
 ﻿
+@model Event
 @{
     ViewData["Title"] = "EventDetail";
 
 }
+
+
+@await Component.InvokeAsync("Header")
 
 <!-- Banner Area Start -->
 		<div class="banner-area-wrapper">
@@ -30,14 +34,14 @@
                             <div class="event-details-img">
                                 <img src="~/img/event/event-details.jpg" alt="event-details">
                                 <div class="event-date">
-                                    <h3>20 <span>jun</span></h3>  
+                                    <h3>@Model.Date.Split(" ")[0] <span>@Model.Date.Split(" ")[1]</span></h3>  
                                 </div>
                             </div>
                             <div class="event-details-content">
-                                <h2>ADVANCE WED DEVELOPMENT WORKSHOP</h2>
+                                <h2>@Model.Title</h2>
                                 <ul>
-                                    <li><span>time : </span>9:30am - 4:45pm</li>
-                                    <li><span>venue : </span>Cristal Centre, 254 New Yourk</li>
+                                    <li><span>time : </span>@Model.Time</li>
+                                    <li><span>venue : </span>@Model.Venue</li>
                                 </ul>
                                 <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </p>
                                 <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem </p>
@@ -180,3 +184,6 @@
         </div>
         <!-- Event Details End -->  
 
+
+        
+@await Component.InvokeAsync("Footer")

@@ -31,6 +31,22 @@ namespace Asp_Practise_HomeEdu.Controllers
             return View(cours);
         }
 
+        public IActionResult Search(string search)
+        {
+            List<Cours> course=new List<Cours>();
+            if (search!=null)
+            {
+                course = _context.Courses
+                .OrderBy(c => c.Id)
+                .Where(c => c.Name.ToLower()
+                .Contains(search.ToLower()))
+                .Take(5)
+                .ToList();
+            }
+
+            return PartialView("_SearchCoursPartial",course);
+        }
+
 
     }
 }

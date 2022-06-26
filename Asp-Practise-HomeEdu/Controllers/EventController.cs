@@ -28,5 +28,21 @@ namespace Asp_Practise_HomeEdu.Controllers
 
             return View(ev);
         }
+
+        public IActionResult Search(string search)
+        {
+            List<Event> ev = new List<Event>();
+            if (search != null)
+            {
+                ev = _context.Events
+                .OrderBy(c => c.Id)
+                .Where(e=>e.Title.ToLower()
+                .Contains(search.ToLower()))
+                .Take(5)
+                .ToList();
+            }
+
+            return PartialView("_SearchEventPartial", ev);
+        }
     }
 }

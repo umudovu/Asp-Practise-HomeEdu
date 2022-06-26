@@ -35,6 +35,7 @@ namespace Asp_Practise_HomeEdu.Controllers
             return View(homeVM);
         }
 
+
        
     }
 }
