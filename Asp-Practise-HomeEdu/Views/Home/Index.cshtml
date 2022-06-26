@@ -1,0 +1,351 @@
+﻿@model HomeVM
+
+ <!-- Header Area Start -->
+		<header class="top">
+			<div class="header-area header-sticky fixed">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-3 col-xs-6">
+							<div class="logo">
+								<a asp-controller="home" asp-action="index"><img src="img/logo/logo.png" alt="eduhome" /></a>
+							</div>
+						</div>
+						<div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="content-wrapper one">
+                                <!-- Main Menu Start -->
+                                <div class="main-menu one text-right">
+                                    <nav>
+                                        <ul>
+                                            <li><a asp-controller="home" asp-action="index">Home</a>
+                                                <ul>
+                                                    <li><a href="index.html">Home One</a></li>
+                                                    <li><a href="index-2.html">Home Two</a></li>
+                                                    <li><a href="index-3.html">Home Three</a></li>
+                                                    <li><a href="index-4.html">Home Four</a></li>
+                                                    <li><a href="index-5.html">Home Five</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a  asp-controller="Course" asp-action="index">courses</a>
+                                                <ul>
+                                                    <li><a asp-controller="Course" asp-action="index">courses</a></li>
+                                                    <li><a href="course-details.html">courses details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a asp-controller="event" asp-action="index">event</a>
+                                                <ul>
+                                                    <li><a href="event.html">event</a></li>
+                                                    <li><a href="event-left-side-bar.html">event left sidebar</a></li>
+                                                    <li><a href="event-right-side-bar.html">event right sidebar</a></li>
+                                                    <li><a href="event-details.html">event details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="hidden-sm"><a asp-controller="teacher" asp-action="index">teacher</a>
+                                                <ul>
+                                                    <li><a href="teacher.html">teacher</a></li>
+                                                    <li><a href="teacher-details.html">teacher details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a asp-controller="blog" asp-action="index">blog</a>
+                                                <ul>
+                                                    <li><a asp-controller="blog" asp-action="index">blog</a></li>
+                                                    <li><a href="blog-left-side-bar.html">blog left sidebar</a></li>
+                                                    <li><a href="blog-right-side-bar.html">blog righ sidebar</a></li>
+                                                    <li><a href="blog-details.html">blog details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a asp-controller="contact" asp-action="index">Contact</a></li>
+                                            <li><a href="#">Buy Now</a>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="mobile-menu hidden-lg hidden-md one"></div>
+                                <!-- Main Menu End -->
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Area End -->
+<!-- Background Area Start -->
+        <section id="slider-container" class="slider-area"> 
+            <div class="slider-owl owl-theme owl-carousel"> 
+                <!-- Start Slingle Slide -->
+                @foreach (var item in Model.Sliders)
+               {
+                   <div class="single-slide item" style="background-image: url(img/@item.ImgUrl)">
+                    <!-- Start Slider Content -->
+                    <div class="slider-content-area">  
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7 col-md-offset-left-5"> 
+                                    <div class="slide-content-wrapper">
+                                        <div class="slide-content">
+                                            <h3>EDUCATION MAKES </h3>
+                                            <h2>PROPER HUMANITY </h2>
+                                            <p>I must explain to you how all this mistaken idea of denouncing pleasure and prsing pain was born and I will give you a complete account of the system  </p>
+                                            <a class="default-btn" href="about.html">Learn more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Slider Content -->
+                </div>
+               }
+                <!-- End Slingle Slide -->								
+            </div>
+        </section>
+		<!-- Background Area End -->
+        <!-- Notice Start -->
+        <section class="notice-area pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="notice-left">
+                            <h3>notice board</h3>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>5, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-75">
+                                <h4>3, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>5, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-70">
+                                <h4>3, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>5, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-70">
+                                <h4>3, June 2017</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="notice-right">
+                            <div class="single-notice-right mb-25 pb-25">
+                                <h3>PROFESSIONAL TEACHER</h3>
+                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
+                            </div> 
+                            <div class="single-notice-right mb-25 pb-25">
+                                <h3>Online courses</h3>
+                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
+                            </div> 
+                            <div class="single-notice-right">
+                                <h3>easy to addmission</h3>
+                                <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings </p>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Notice End -->
+        <!-- Choose Start -->
+        <section class="choose-area pb-85 pt-77">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-left-4 col-sm-8 col-md-offset-left-4">
+                        <div class="choose-content text-left">
+                            <h2>WHY YOU CHOOSE EDUHOME ?</h2>
+                            <p>I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder of humanit happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because. </p>
+                            <p class="choose-option">I must explain to you how all this mistaken idea of denouncing pleure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings  the master-builder. </p>
+                            <a class="default-btn" href="course-details.html">view courses</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Choose Area End -->
+        <!-- Courses Area Start -->
+        <div class="courses-area pt-150 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title">
+                            <img src="img/icon/section.png" alt="section-title">
+                            <h2>COURSES WE OFFER</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-course">
+                            <div class="course-img">
+                                <a href="course-details.html"><img src="img/course/course1.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
+                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
+                                <a class="default-btn" href="course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-course">
+                            <div class="course-img">
+                                <a href="course-details.html"><img src="img/course/course2.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
+                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
+                                <a class="default-btn" href="course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-md-4 hidden-sm col-xs-12">
+                        <div class="single-course">
+                            <div class="course-img">
+                                <a href="course-details.html"><img src="img/course/course3.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="course-details.html">CSE ENGINEERING</a></h3>
+                                <p>I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness</p>
+                                <a class="default-btn" href="course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses Area End -->
+        <!-- Event Area Start -->
+        <div class="event-area one text-center pt-140 pb-150">
+            <div class="container">
+                <div class="row">
+                     <div class="col-xs-12">
+                        <div class="section-title">
+                            <img src="img/icon/section.png" alt="section-title">
+                            <h2>UPCOMMING EVENTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach (var item in Model.Events)
+                       {
+
+                     <div class="col-md-6 col-sm-12 col-xs-12">
+                           <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="event-details.html">@item.Date.Split(" ")[0] <span>@item.Date.Split(" ")[1]</span></a></h3>
+                            </div>
+                            <div class="event-content text-left">
+                                <div class="event-content-left">
+                                    <h4><a href="event-details.html">@item.Title</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>@item.Time</li>
+                                        <li><i class="fa fa-map-marker"></i>@item.Venue</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                       }
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Event Area End -->
+        <!-- Testimonial Area Start -->
+        <div class="testimonial-area pt-110 pb-105 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="testimonial-owl owl-theme owl-carousel">
+                        <div class="col-md-8 col-md-offset-2 col-sm-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="img/testimonial/testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>I must explain to you how all this mistaken idea of denoung pleure and praising pain was born and I will give you a coete account of the system, and expound the actual</p>
+                                        <h4>David Morgan</h4>
+                                        <h5>Student, CSE</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial Area End -->
+        <!-- Blog Area Start -->
+        <div class="blog-area pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="img/icon/section.png" alt="section-title">
+                            <h2>LATEST FROM BLOG</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                   @foreach (var blog in Model.Blogs)
+                  {
+                       <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-blog">
+                            <div class="blog-img">
+                                <a href="blog-details.html"><img src="img/@blog.ImgUrl" alt="blog"></a>
+                                <div class="blog-hover">
+                                    <a href="blog-details.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>By @blog.Author.Name  /  @blog.CreateDate  /  <i class="fa fa-comments-o"></i> @blog.Comments.Count()</p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <h2><a href="blog-details.html">I must explain to you how all this a mistaken idea </a></h2>
+                                    <a href="blog-details.html">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  }
+                </div>
+            </div>
+        </div>
+        <!-- Blog Area End -->
+
+
+                                @await Component.InvokeAsync("Footer")
